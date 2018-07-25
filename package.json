@@ -1,0 +1,22 @@
+{
+  "name": "scrolls.js",
+  "version": "1.0.0",
+  "description": "scrolls.js smooth scrolling library.",
+  "main": "scrolls.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PurplestInc/scrolls.js.git"
+  },
+  "keywords": [
+    "smooth scrolling",
+    "scroller",
+    "scroll",
+    "back-to-top"
+  ],
+  "author": "Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PurplestInc/scrolls.js/issues"
+  },
+  "homepage": "https://scrollsjs.com"
+}

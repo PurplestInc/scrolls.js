@@ -2,7 +2,7 @@
  * @fileoverview scrolls.js smooth scrolling library.
  * @author Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)
  * @copyright Purplest, Inc. 2018
- * @version 1.0.3
+ * @version 1.0.4
  */
 
 'use strict';

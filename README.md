@@ -2,8 +2,8 @@ scrolls.js - smooth scrolling library.
 ==========
 ![npm](https://img.shields.io/npm/l/scrolls.js.svg?colorB=a8f)
 [![npm](https://img.shields.io/npm/dt/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js)
-![npm](https://img.shields.io/npm/v/scrolls.js.svg?colorB=a8f)
-![Gzip Size](https://img.shields.io/badge/gzip%20size-524%20B-a8f.svg)
+[![npm](https://img.shields.io/npm/v/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js#installation)
+[![Gzip Size](https://img.shields.io/badge/gzip%20size-524%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.3/scrolls.min.js?compression=gzip)
 
 scrolls.js is a tiny library to help provide smooth scrolling functionality for those that do not currently use another solution.
 
@@ -48,9 +48,9 @@ or via CDN:
 
 ```html
 <!-- Source Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.2/scrolls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.3/scrolls.js"></script>
 <!-- Minified Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.2/scrolls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.3/scrolls.min.js"></script>
 ```
 
 ### Usage

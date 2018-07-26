@@ -1,11 +1,19 @@
 # Changelog
 
+## v1.0.5 - 07-26-2018
+
+### Changed
+
+* Fixed a typo in this changelog.
+* Updated version number in `scrolls.js` to reflect the latest version on npm.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm and added links to the landing page.
+
 ## v1.0.4 - 07-26-2018
 
 ### Changed
 
 * Updated version number in `scrolls.js` to reflect the latest version on npm.
-* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm updated gzip size badge to reflect the new `scrolls.min.js` size based on CDN.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm and updated gzip size badge to reflect the new `scrolls.min.js` size based on CDN.
 
 ## v1.0.3 - 07-26-2018
 

@@ -3,9 +3,9 @@ scrolls.js - smooth scrolling library.
 [![license](https://img.shields.io/badge/license-MIT-a8f.svg)](https://github.com/PurplestInc/scrolls.js/blob/master/LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js)
 [![npm version](https://img.shields.io/npm/v/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js#installation)
-[![gzip size](https://img.shields.io/badge/gzip%20size-408%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.4/scrolls.min.js?compression=gzip)
+[![gzip size](https://img.shields.io/badge/gzip%20size-408%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js?compression=gzip)
 
-scrolls.js is a tiny library to help provide smooth scrolling functionality for those that do not currently use another solution.
+[scrolls.js](https://scrollsjs.com) is a tiny [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js?compression=gzip) to help provide smooth scrolling functionality for those that do not currently use another solution.
 
 Table of Contents
 -----------------
@@ -23,6 +23,8 @@ Basic Information
 -----------------
 
 The smooth scrolling library built to provide convenience.
+
+Visit the landing page at [scrollsjs.com](https://scrollsjs.com) to see a [demo](https://scrollsjs.com) of the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js?compression=gzip) in action!
 
 Features
 --------
@@ -48,9 +50,9 @@ or via CDN:
 
 ```html
 <!-- Source Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.4/scrolls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.js"></script>
 <!-- Minified Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.4/scrolls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js"></script>
 ```
 
 ### Usage
@@ -67,13 +69,14 @@ Documentation
 -------------
 
 ```javascript
-// Default customizeable variables.
+// Default customizeable variables via an object within the second parameter
+// of the function.
 
 let callback; // Function to execute after scrolling has ended
 let durationOfMovement = 1000; // Duration of the scrolling
 let offsetPosition = 0; // Distance to offset from the stop position
 
-// Pass in an object as the second parameter to get customize the behavior.
+// Pass in an object as the second parameter to customize the behavior.
 
 scrolls('h1', {
   callback: () => {

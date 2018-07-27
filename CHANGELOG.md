@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.6 - 07-27-2018
+
+### Changed
+
+* Updated version number in `scrolls.js` to reflect the latest version on npm.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm, fixed a typo, added a feature, and added links.
+
 ## v1.0.5 - 07-26-2018
 
 ### Changed

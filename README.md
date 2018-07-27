@@ -3,35 +3,37 @@ scrolls.js - smooth scrolling library.
 [![license](https://img.shields.io/badge/license-MIT-a8f.svg)](https://github.com/PurplestInc/scrolls.js/blob/master/LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js)
 [![npm version](https://img.shields.io/npm/v/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js#installation)
-[![gzip size](https://img.shields.io/badge/gzip%20size-408%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js?compression=gzip)
+[![gzip size](https://img.shields.io/badge/gzip%20size-408%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.min.js?compression=gzip)
 
-[scrolls.js](https://scrollsjs.com) is a tiny [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js?compression=gzip) to help provide smooth scrolling functionality for those that do not currently use another solution.
+[scrolls.js](https://scrollsjs.com) is a tiny [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.min.js?compression=gzip) to help provide smooth scrolling functionality for those that do not currently use another solution.
 
 Table of Contents
 -----------------
 
-1. [Basic Information](https://github.com/PurplestInc/scrolls.js#basic-information)
+1. [Basic Info](https://github.com/PurplestInc/scrolls.js#basic-info)
 2. [Features](https://github.com/PurplestInc/scrolls.js#features)
 3. [Getting Started](https://github.com/PurplestInc/scrolls.js#getting-started)
   1. [Installation](https://github.com/PurplestInc/scrolls.js#installation)
   2. [Usage](https://github.com/PurplestInc/scrolls.js#usage)
-4. [Documentation](https://github.com/PurplestInc/scrolls.js#documentation)
-5. [Changelog](https://github.com/PurplestInc/scrolls.js#changelog)
-6. [License](https://github.com/PurplestInc/scrolls.js#license)
+4. [Examples](https://github.com/PurplestInc/scrolls.js#examples)
+5. [Documentation](https://github.com/PurplestInc/scrolls.js#documentation)
+6. [Changelog](https://github.com/PurplestInc/scrolls.js#changelog)
+7. [License](https://github.com/PurplestInc/scrolls.js#license)
 
-Basic Information
+Basic Info
 -----------------
 
-The smooth scrolling library built to provide convenience.
+A smooth scrolling [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.min.js?compression=gzip) built to provide convenience for developers.
 
-Visit the landing page at [scrollsjs.com](https://scrollsjs.com) to see a [demo](https://scrollsjs.com) of the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js?compression=gzip) in action!
+Visit the landing page at [scrollsjs.com](https://scrollsjs.com) to see a [demo](https://scrollsjs.com) of the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.min.js?compression=gzip) in action!
 
 Features
 --------
 
+* Plug-and-play (unless you have other JavaScript that uses `scrolls()` already...)
 * Number or selector-based targeting
 * Allows a function to be called when scrolling has ended
-* Customizeable duration of movement and offest position from the stop position
+* Customizeable duration of movement and offset position from the stop position
 * Fully open source
 
 Getting Started
@@ -39,7 +41,7 @@ Getting Started
 
 ### Installation
 
-You can install the library via npm:
+You can install the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.min.js?compression=gzip) via npm:
 
 ```javascript
 npm i scrolls.js
@@ -50,9 +52,9 @@ or via CDN:
 
 ```html
 <!-- Source Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.js"></script>
 <!-- Minified Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.5/scrolls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.6/scrolls.min.js"></script>
 ```
 
 ### Usage
@@ -64,6 +66,11 @@ scrolls('h1', {
   durationOfMovement: 5000 // Defaults to 1000, or 1 second.
 });
 ```
+
+Examples
+--------
+
+Please see [scrollsjs.com](https://scrollsjs.com) for the examples and a [demo](https://scrollsjs.com) of them working on the website.
 
 Documentation
 -------------

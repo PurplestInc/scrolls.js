@@ -3,9 +3,9 @@ scrolls.js - smooth scrolling library.
 [![license](https://img.shields.io/badge/license-MIT-a8f.svg)](https://github.com/PurplestInc/scrolls.js/blob/master/LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js)
 [![npm version](https://img.shields.io/npm/v/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js#installation)
-[![gzip size](https://img.shields.io/badge/gzip%20size-384%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.min.js?compression=gzip)
+[![gzip size](https://img.shields.io/badge/gzip%20size-384%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.min.js?compression=gzip)
 
-[scrolls.js](https://scrollsjs.com) is a tiny [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.min.js?compression=gzip) to help provide smooth scrolling functionality for those that do not currently use another solution.
+[scrolls.js](https://scrollsjs.com) is a tiny [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.min.js?compression=gzip) to help provide smooth scrolling functionality for those that do not currently use another solution.
 
 Table of Contents
 -----------------
@@ -23,9 +23,9 @@ Table of Contents
 Basic Info
 -----------------
 
-A smooth scrolling [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.min.js?compression=gzip) built to provide convenience for developers.
+A smooth scrolling [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.min.js?compression=gzip) built to provide convenience for developers.
 
-Visit the landing page at [scrollsjs.com](https://scrollsjs.com) to see a [demo](https://scrollsjs.com) of the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.min.js?compression=gzip) in action!
+Visit the landing page at [scrollsjs.com](https://scrollsjs.com) to see a [demo](https://scrollsjs.com) of the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.min.js?compression=gzip) in action!
 
 Features
 --------
@@ -41,7 +41,7 @@ Getting Started
 
 ### Installation
 
-You can install the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.min.js?compression=gzip) via npm:
+You can install the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.min.js?compression=gzip) via npm:
 
 ```javascript
 npm i scrolls.js
@@ -52,9 +52,9 @@ or via CDN:
 
 ```html
 <!-- Source Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.js"></script>
 <!-- Minified Version -->
-<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.9/scrolls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.10/scrolls.min.js"></script>
 ```
 
 ### Usage

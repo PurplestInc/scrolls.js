@@ -2,7 +2,7 @@
  * @fileoverview scrolls.js - smooth scrolling library.
  * @author Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)
  * @copyright Purplest, Inc. 2018
- * @version 1.0.9
+ * @version 1.1.0
  */
 
 'use strict';
@@ -26,6 +26,31 @@ const scrolls = (selector, options) => {
   let timeElapsed = 0;           // Time spent scrolling
 
   /**
+   * Gather options and setup variables.
+   */
+
+  if (options) {
+    durationOfMovement = options.durationOfMovement || 1000;
+    offsetDistance = options.offsetDistance || 0;
+    callback = options.callback;
+  }
+
+  startPosition = window.scrollY || window.pageYOffset;
+
+  switch (typeof selector) {
+    case 'number':
+      element = undefined;
+      stopPosition = selector;
+      break;
+    case 'string':
+      element = document.querySelector(selector);
+      stopPosition = element.getBoundingClientRect().top + startPosition;
+      break;
+  }
+
+  distanceToMove = stopPosition - startPosition + offsetDistance;
+
+  /**
    * Easing function to ensure the scrolling occurs smoothly.
    *
    * @param {Number} timeElapsed - Time spent scrolling
@@ -43,7 +68,7 @@ const scrolls = (selector, options) => {
     }
 
     timeElapsed--;
-
+      
     return -distanceToMove / 2 * (timeElapsed * (timeElapsed - 2) - 1) + startPosition;
   };
 
@@ -63,10 +88,10 @@ const scrolls = (selector, options) => {
     window.scrollTo(0, ease(timeElapsed, startPosition, distanceToMove, durationOfMovement));
 
     if (timeElapsed < durationOfMovement) {
-      window.requestAnimationFrame(loop)
+      window.requestAnimationFrame(loop);
     } else {
       window.scrollTo(0, startPosition + distanceToMove);
-  
+    
       if (callback && typeof callback === 'function') {
         callback();
       }
@@ -76,33 +101,8 @@ const scrolls = (selector, options) => {
   };
 
   /**
-   * Gathers options and initiates the scrolling event.
+   * Start scrolling...
    */
 
-  const scroll = () => {
-    if (options) {
-      durationOfMovement = options.durationOfMovement || 1000;
-      offsetDistance = options.offsetDistance || 0;
-      callback = options.callback;
-    }
-
-    startPosition = window.scrollY || window.pageYOffset;
-
-    switch (typeof selector) {
-      case 'number':
-        element = undefined;
-        stopPosition = selector;
-        break;
-      case 'string':
-        element = document.querySelector(selector);
-        stopPosition = element.getBoundingClientRect().top + startPosition;
-        break;
-    }
-
-    distanceToMove = stopPosition - startPosition + offsetDistance;
-
-    window.requestAnimationFrame(loop);
-  };
-
-  scroll();
+  window.requestAnimationFrame(loop);
 };

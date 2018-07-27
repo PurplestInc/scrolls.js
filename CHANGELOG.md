@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.10 - 07-27-2018
+
+### Changed
+
+* Fixed `scrolls.min.js`. Previous refactoring caused it to break.
+* Refactored `scrolls.js` a bit more keeping it relatively easy to understand.
+* Updated the version number in `scrolls.js` to reflect the latest version on npm.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm.
+
 ## v1.0.9 - 07-27-2018
 
 ### Changed

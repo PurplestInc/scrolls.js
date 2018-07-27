@@ -2,7 +2,7 @@
  * @fileoverview scrolls.js - smooth scrolling library.
  * @author Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)
  * @copyright Purplest, Inc. 2018
- * @version 1.0.7
+ * @version 1.0.8
  */
 
 'use strict';
@@ -65,26 +65,18 @@ const scrolls = (selector, options) => {
     if (timeElapsed < durationOfMovement) {
       window.requestAnimationFrame(loop)
     } else {
-      finish();
+      window.scrollTo(0, startPosition + distanceToMove);
+  
+      if (callback && typeof callback === 'function') {
+        callback();
+      }
+  
+      timeStarted = false;
     }
   };
 
   /**
-   * Stops the scrolling event
-   */
-
-  const finish = () => {
-    window.scrollTo(0, startPosition + distanceToMove);
-
-    if (callback && typeof callback === 'function') {
-      callback();
-    }
-
-    timeStarted = false;
-  };
-
-  /**
-   * Gathers options and initiates the scrolling event
+   * Gathers options and initiates the scrolling event.
    */
 
   const scroll = () => {

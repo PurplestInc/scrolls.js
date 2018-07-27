@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.9 - 07-27-2018
+
+### Changed
+
+* Updated the version number in `scrolls.js` to reflect the latest version on npm.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm and updated gzip size badge to reflect the new `scrolls.min.js` size based on CDN.
+
 ## v1.0.8 - 07-27-2018
 
 ### Changed

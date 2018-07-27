@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.7 - 07-27-2018
+
+### Changed
+
+* Removed some unnecessary characters within `scrolls.js`.
+* Updated version number in `scrolls.js` to reflect the latest version on npm.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm.
+
 ## v1.0.6 - 07-27-2018
 
 ### Changed

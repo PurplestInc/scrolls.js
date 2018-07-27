@@ -1,119 +1,116 @@
 /**
- * @fileoverview scrolls.js smooth scrolling library.
+ * @fileoverview scrolls.js - smooth scrolling library.
  * @author Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)
  * @copyright Purplest, Inc. 2018
- * @version 1.0.6
+ * @version 1.0.7
  */
 
 'use strict';
 
 /**
- * scrolls.js.
+ * Initiates smooth scrolling event.
  *
  * @param {Any} selector - String or number to scroll to
  * @param {Object} options - Extra options
  */
 
 const scrolls = (selector, options) => {
-	let callback;                  // Function to execute when scrolling has ended
-	let distanceToMove = 0;        // Distance of the scrolling
-	let durationOfMovement = 1000; // Duration of the scrolling
-	let element;                   // Element to scroll to
-	let offsetDistance = 0;        // Distance to offset from the stop position
-	let startPosition = 0;         // Where the scrolling begins
-	let stopPosition = 0;          // Where the scrolling ends
-	let timeStarted = 0;           // Time the scrolling began
-	let timeElapsed = 0;           // Time spent scrolling
+  let callback;                  // Function to execute when scrolling has ended
+  let distanceToMove = 0;        // Distance of the scrolling
+  let durationOfMovement = 1000; // Duration of the scrolling
+  let element;                   // Element to scroll to
+  let offsetDistance = 0;        // Distance to offset from the stop position
+  let startPosition = 0;         // Where the scrolling begins
+  let stopPosition = 0;          // Where the scrolling ends
+  let timeStarted = 0;           // Time the scrolling began
+  let timeElapsed = 0;           // Time spent scrolling
 
-	/**
-	 * Easing function to ensure the scrolling occurs smoothly.
-	 *
-	 * @param {Number} timeElapsed - Time spent scrolling
-	 * @param {Integer} startPosition - Where the scrolling begins
-	 * @param {Number} distanceToMove - Distance of the scrolling
-	 * @param {Number} durationOfMovement - Duration of the scrolling
-	 * @returns {Number} - Next position
-	 */
+  /**
+   * Easing function to ensure the scrolling occurs smoothly.
+   *
+   * @param {Number} timeElapsed - Time spent scrolling
+   * @param {Integer} startPosition - Where the scrolling begins
+   * @param {Number} distanceToMove - Distance of the scrolling
+   * @param {Number} durationOfMovement - Duration of the scrolling
+   * @returns {Number} - Next position
+   */
 
-	const ease = (timeElapsed, startPosition, distanceToMove, durationOfMovement) => {
-		timeElapsed /= durationOfMovement / 2;
+  const ease = (timeElapsed, startPosition, distanceToMove, durationOfMovement) => {
+    timeElapsed /= durationOfMovement / 2;
 
-		if (timeElapsed < 1) {
-			return distanceToMove / 2 * timeElapsed * timeElapsed + startPosition;
-		}
+    if (timeElapsed < 1) {
+      return distanceToMove / 2 * timeElapsed * timeElapsed + startPosition;
+    }
 
-		timeElapsed--;
+    timeElapsed--;
 
-		return -distanceToMove / 2 * (timeElapsed * (timeElapsed - 2) - 1) + startPosition;
-	};
+    return -distanceToMove / 2 * (timeElapsed * (timeElapsed - 2) - 1) + startPosition;
+  };
 
-	/**
-	 * Request Animation Frame Loop
-	 *
-	 * @param {Number} timeNow - Current time within scrolling event
-	 */
+  /**
+   * Request Animation Frame Loop
+   *
+   * @param {Number} timeNow - Current time within scrolling event
+   */
 
-	const loop = (timeNow) => {
-		if (!timeStarted) {
-			timeStarted = timeNow;
-		}
+  const loop = (timeNow) => {
+    if (!timeStarted) {
+      timeStarted = timeNow;
+    }
 
-		timeElapsed = timeNow - timeStarted;
+    timeElapsed = timeNow - timeStarted;
 
-		window.scrollTo(0, ease(timeElapsed, startPosition, distanceToMove, durationOfMovement));
+    window.scrollTo(0, ease(timeElapsed, startPosition, distanceToMove, durationOfMovement));
 
-		if (timeElapsed < durationOfMovement) {
-			window.requestAnimationFrame(loop)
-		} else {
-			finish();
-		}
-	};
+    if (timeElapsed < durationOfMovement) {
+      window.requestAnimationFrame(loop)
+    } else {
+      finish();
+    }
+  };
 
-	/**
-	 * Stops the scrolling event
-	 */
+  /**
+   * Stops the scrolling event
+   */
 
-	const finish = () => {
-		window.scrollTo(0, startPosition + distanceToMove);
+  const finish = () => {
+    window.scrollTo(0, startPosition + distanceToMove);
 
-		if (callback && typeof callback === 'function') {
-			callback();
-		}
+    if (callback && typeof callback === 'function') {
+      callback();
+    }
 
-		timeStarted = false;
-	};
+    timeStarted = false;
+  };
 
-	/**
-	 * Scroll initiator.
-	 *
-	 * @param {Any} selector - String or number to scroll to
-	 * @param {Object} options - Extra options
-	 */
+  /**
+   * Gathers options and initiates the scrolling event
+   */
 
-	const scroll = (selector, options) => {
-		if (options) {
-			durationOfMovement = options.durationOfMovement || 1000;
-			offsetDistance = options.offsetDistance || 0;
-			callback = options.callback;
-		}
+  const scroll = () => {
+    if (options) {
+      durationOfMovement = options.durationOfMovement || 1000;
+      offsetDistance = options.offsetDistance || 0;
+      callback = options.callback;
+    }
 
-		startPosition = window.scrollY || window.pageYOffset;
+    startPosition = window.scrollY || window.pageYOffset;
 
-		switch (typeof selector) {
-			case 'number':
-				element = undefined;
-				stopPosition = selector;
-				break;
-			case 'string':
-				element = document.querySelector(selector);
-				stopPosition = element.getBoundingClientRect().top + startPosition;
-				break;
-		}
+    switch (typeof selector) {
+      case 'number':
+        element = undefined;
+        stopPosition = selector;
+        break;
+      case 'string':
+        element = document.querySelector(selector);
+        stopPosition = element.getBoundingClientRect().top + startPosition;
+        break;
+    }
 
-		distanceToMove = stopPosition - startPosition + offsetDistance;
+    distanceToMove = stopPosition - startPosition + offsetDistance;
 
-		window.requestAnimationFrame(loop);
-	};
+    window.requestAnimationFrame(loop);
+  };
 
-	return scroll(selector, options);
+  scroll();
 };

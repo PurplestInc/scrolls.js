@@ -3,7 +3,7 @@ scrolls.js - smooth scrolling library.
 [![license](https://img.shields.io/badge/license-MIT-a8f.svg)](https://github.com/PurplestInc/scrolls.js/blob/master/LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js)
 [![npm version](https://img.shields.io/npm/v/scrolls.js.svg?colorB=a8f)](https://www.npmjs.com/package/scrolls.js#installation)
-[![gzip size](https://img.shields.io/badge/gzip%20size-392%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.12/scrolls.min.js?compression=gzip)
+[![gzip size](https://img.shields.io/badge/gzip%20size-430%20B-a8f.svg)](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.12/scrolls.min.js?compression=gzip)
 
 [scrolls.js](https://scrollsjs.com) is a tiny [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.12/scrolls.min.js?compression=gzip) to help provide smooth scrolling functionality for those that do not currently use another solution.
 

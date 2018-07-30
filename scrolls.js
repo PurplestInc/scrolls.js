@@ -2,7 +2,7 @@
  * @fileoverview scrolls.js - smooth scrolling library.
  * @author Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)
  * @copyright Purplest, Inc. 2018
- * @version 1.0.12
+ * @version 1.0.13
  */
 
 'use strict';
@@ -37,21 +37,19 @@ const scrolls = (selector, options) => {
 
   startPosition = window.scrollY || window.pageYOffset;
 
-  if (selector) {
-    switch (typeof selector) {
-      case 'number':
-        element = undefined;
-        stopPosition = selector;
-        break;
-      case 'string':
-        element = document.querySelector(selector);
-        stopPosition = element.getBoundingClientRect().top + startPosition;
-        break;
-      default:
-        element = undefined;
-        stopPosition = 0;
-        break;
-    }
+  switch (typeof selector) {
+    case 'number':
+      element = undefined;
+      stopPosition = selector;
+      break;
+    case 'string':
+      element = document.querySelector(selector);
+      stopPosition = element.getBoundingClientRect().top + startPosition;
+      break;
+    default:
+      element = undefined;
+      stopPosition = 0;
+      break;
   }
 
   distanceToMove = stopPosition - startPosition + offsetDistance;

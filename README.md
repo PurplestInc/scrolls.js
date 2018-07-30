@@ -27,7 +27,7 @@ A smooth scrolling [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.15/scro
 
 Visit the landing page at [scrollsjs.com](https://scrollsjs.com) to see a [demo](https://scrollsjs.com) of the [library](https://cdn.jsdelivr.net/npm/scrolls.js@1.0.15/scrolls.min.js?compression=gzip) in action!
 
-If you like this project you may like [durations.js](https://durationsjs.com) our tiny animated durations [library](https://github.com/PurplestInc/durations.js)!
+If you like this project you may like our [durations.js](https://durationsjs.com) animated durations [library](https://github.com/PurplestInc/durations.js)!
 
 Features
 --------

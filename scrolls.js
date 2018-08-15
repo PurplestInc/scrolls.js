@@ -2,7 +2,7 @@
  * @fileoverview scrolls.js - smooth scrolling library.
  * @author Rob Dukarski <rob@purplest.com> (https://github.com/RobDukarski)
  * @copyright Purplest, Inc. 2018
- * @version 1.0.16
+ * @version 1.0.17
  */
 
 'use strict';
@@ -111,4 +111,6 @@ const scrolls = (selector, options) => {
   window.requestAnimationFrame(loop);
 };
 
-module.exports = scrolls;
+try {
+  module.exports = exports = scrolls;
+} catch (e) {}

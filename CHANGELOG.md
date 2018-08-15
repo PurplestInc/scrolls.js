@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.17 - 08-15-2018
+
+### Changed
+
+* Updated `scrolls.js` to ensure the module is exported and works within the browser and updated the version number in `scrolls.js` to reflect the latest version on npm.
+* Updated [README.md](https://github.com/PurplestInc/scrolls.js/blob/master/README.md) to reflect the latest version on npm.
+
 ## v1.0.16 - 08-15-2018
 
 ### Changed
